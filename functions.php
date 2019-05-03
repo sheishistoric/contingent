@@ -11,9 +11,13 @@ function wpshout_dequeue_and_then_enqueue() {
     wp_dequeue_script( 'largo-navigation' );
     wp_deregister_script( 'largo-navigation' );
     // Enqueue replacement child theme script
-    wp_register_script('');
-    wp_enqueue_script('largo-navigation-2', get_stylesheet_directory_uri() . '/js/navigation.js',
+    wp_register_script(
+		'largo-navigation',
+		get_stylesheet_directory_uri() . '/js/navigation.js',
         array( 'jquery' )
+	);
+    wp_enqueue_script(
+		'largo-navigation',
     );
 }
 remove_filter('pre_user_description', 'wp_filter_kses');remove_filter('pre_user_description', 'wp_filter_kses');
