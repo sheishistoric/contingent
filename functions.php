@@ -17,7 +17,7 @@ function wpshout_dequeue_and_then_enqueue() {
         array( 'jquery' )
 	);
     wp_enqueue_script(
-		'largo-navigation',
+		'largo-navigation'
     );
 }
 remove_filter('pre_user_description', 'wp_filter_kses');remove_filter('pre_user_description', 'wp_filter_kses');
